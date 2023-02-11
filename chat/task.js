@@ -44,7 +44,7 @@ sendMsg(roboText)
 
 let sendText = document.getElementById("chat-widget__input")
 sendText.addEventListener("keydown", (e) => {
-    if (e.code == "Enter" && sendText.value !== "") {
+    if (e.code == "Enter" && sendText.value.trim() !== "") {
         let textClient = sendText.value,
             msgClient = createMsg(textClient, client=true)
             sendText.value = ""
